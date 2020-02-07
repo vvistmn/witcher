@@ -1,0 +1,107 @@
+@media (max-width: 950px) {
+    .play {
+        display: none;
+    }
+}
+@media (max-width: 760px) {
+    .footer__content {
+        display: block;
+        text-align: center;
+    }
+    .left {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 540px) {
+    .menu__btn {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 40px;
+        width: 30px;
+        height: 2px;
+        border: none;
+        background-color: #fff;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            transition: transform 0.2s;
+            margin-top: -7px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            transition: transform 0.2s;
+            margin-top: 7px;
+        }
+    }
+    .menu__btn-active {
+        height: 0;
+        &::before {
+            transform: rotate(45deg);
+            margin-top: 0;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            margin-top: 0;
+        }
+    }
+    .header__inner {
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        background-color: #9D2929;
+        flex-direction: column;
+        width: 250px;
+        padding-bottom: 15px;
+        z-index: 1;
+    }
+    .header__inner-active {
+        display: flex;
+    }
+    .header__logo {
+        margin-bottom: 15px;
+    }
+    .menu__list {
+        margin: auto;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu__link {
+        margin-bottom: 17px;
+        
+        & + .menu__link {
+            margin-left: 0;
+        } 
+    }
+    .social {
+        order: 1;
+        margin-bottom: 15px;
+    }
+    .main-content {
+        margin-top: 240px;
+        
+    }
+    .series {
+        width: 70%;
+    }
+    .main__description {
+        width: 80%;
+    }
+}
